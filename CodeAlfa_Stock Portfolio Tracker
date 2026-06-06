@@ -1,0 +1,22 @@
+#Stock Portfolio Tracker project 
+# Stock prices stored in a dictionary
+stocks = {
+    "AAPL": 180,
+    "TSLA": 250,
+    "GOOG": 150,
+    "MSFT": 300
+}
+total_investment = 0
+# User enters stock name
+stock_name = input("Enter stock name (AAPL, TSLA, GOOG, MSFT): ").upper()
+# Check if stock exists
+if stock_name in stocks:
+    quantity = int(input("Enter quantity: "))
+    # Calculate investment value
+    investment = stocks[stock_name] * quantity
+    total_investment += investment
+    print("Stock Price:", stocks[stock_name])
+    print("Investment Value:", investment)
+    print("Total Investment:", total_investment)
+else:
+    print("Stock not found!")
